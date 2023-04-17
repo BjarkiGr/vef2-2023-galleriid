@@ -1,0 +1,333 @@
+:root {
+  --main-color: #ffe6c7;
+  --accent-color: #ffa559;
+  --pop-color: #ff6000;
+  --dark-color: #454545;
+  --white-color: #fff;
+}
+
+@media (max-width: 700px) {
+  .tag {
+    display: none;
+  }
+
+  .file-size {
+    display: none;
+  }
+  .date-created {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    width: 100%;
+    height: 100%;
+  }
+  .login-form {
+    box-shadow: none;
+  }
+  .login-button {
+    width: 50%;
+    height: 10%;
+    font-size: 14px;
+  }
+}
+
+/* global */
+
+.nav-bar {
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--pop-color);
+  color: var(--white-color);
+}
+
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar-item {
+  margin-left: 20px;
+  height: 100%;
+}
+
+.home {
+  margin-right: auto;
+  text-decoration: none;
+  color: var(--white-color);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.login a,
+.register a,
+.upload a,
+.logout a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.login a:hover,
+.register a:hover,
+.upload a:hover,
+.logout a:hover {
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
+.nav-bar-item.logout {
+  display: flex;
+  align-items: center;
+}
+
+.logout button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logout button:focus {
+  outline: none;
+}
+
+/* front page */
+
+.images-container {
+  background-color: var(--white-color);
+}
+
+.image-list {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--dark-color);
+  width: 60%;
+  background-color: var(--main-color);
+  position: relative;
+  display: inline-block;
+  box-shadow: 5px 10px 10px var(--accent-color);
+}
+
+.image {
+  max-width: 50%;
+  max-height: 50%;
+  padding-top: 10px;
+}
+
+.file-size {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.date-created {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.tag {
+  border: 1px solid var(--dark-color);
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  background-color: var(--white-color);
+}
+
+.image-owner {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--dark-color);
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Image page */
+
+.image-page {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-full {
+  width: 100%;
+  height: auto;
+}
+
+.date-created {
+  padding: margin 20px;
+}
+
+.image-tags-full {
+  padding: 20px;
+}
+
+.image-description-full {
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* User page */
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login page */
+.login-page {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.login-form {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-shadow: 5px 10px 10px var(--accent-color);
+}
+
+.login-button {
+  width: 20%;
+  height: 5%;
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: var(--accent-color);
+  box-shadow: 5px 10px 10px var(--pop-color);
+  transition: all 200ms ease;
+}
+
+.login-button:hover {
+  background-color: var(--pop-color);
+  box-shadow: 5px 10px 10px var(--accent-color);
+  cursor: pointer;
+}
+
+/* Register page */
+
+.register-page {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.register-form {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-shadow: 5px 10px 10px var(--accent-color);
+}
+
+input {
+  width: 300px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.register-button {
+  width: 20%;
+  height: 5%;
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: var(--accent-color);
+  box-shadow: 5px 10px 10px var(--pop-color);
+  transition: all 200ms ease;
+}
+
+.register-button:hover {
+  background-color: var(--pop-color);
+  box-shadow: 5px 10px 10px var(--accent-color);
+  cursor: pointer;
+}
+
+/* Upload page */
+
+.upload-container {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.upload-form {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-shadow: 5px 10px 10px var(--accent-color);
+}
+
+.upload-input-description {
+  width: 300px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.upload-input-file {
+  width: 300px;
+}
+
+.upload-button {
+  width: 20%;
+  height: 5%;
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: var(--accent-color);
+  box-shadow: 5px 10px 10px var(--pop-color);
+  transition: all 200ms ease;
+}
+
+.upload-button:hover {
+  background-color: var(--pop-color);
+  box-shadow: 5px 10px 10px var(--accent-color);
+  cursor: pointer;
+}
